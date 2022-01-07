@@ -5,14 +5,13 @@ function verifyToken(
   res: express.Response,
   next: express.NextFunction
 ) {
-  const auth: string | undefined = req.headers.authorization;
+  const token: string | undefined = req.headers.authorization;
 
-  if (!auth) {
+  if (!token) {
     return res.status(401).send({ error: "No token provided" });
   }
 
-  if (typeof auth !== "undefined") {
-    const token: string = auth.split(" ")[1];
+  if (typeof token !== "undefined") {
     req.token = token;
 
     next();
