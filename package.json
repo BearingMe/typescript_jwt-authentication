@@ -1,0 +1,17 @@
+{
+  "name": "jwt_authentication",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/app.js",
+  "scripts": {
+    "start": "node ./dist/app.js",
+    "build": "tsc",
+    "serve": "nodemon ./src/app.ts"
+  },
+  "keywords": [],
+  "author": "smith",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
